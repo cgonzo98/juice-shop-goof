@@ -43,7 +43,7 @@ jobs:
           mv ./snyk /usr/local/bin/
       - name: Configure and run Snyk Code Scan
         run: | 
-          snyk auth ${{ secrets.SNYK_TOKEN }}
+          snyk auth ${{ f453f5a7-e2ac-4941-9d4e-ce0b32d9b253 }}
           snyk code test
 
   snyk-container:
@@ -61,7 +61,7 @@ jobs:
         mv ./snyk /usr/local/bin/
     - name: Scan and Monitor Docker Vulnerabilities
       run: |   
-        snyk auth ${{ secrets.SNYK_TOKEN }}
+        snyk auth ${{ f453f5a7-e2ac-4941-9d4e-ce0b32d9b253 }}
         snyk container test boosef-juiceshop:latest --file=Dockerfile
         snyk container monitor boosef-juiceshop:latest --file=Dockerfile
      
@@ -78,6 +78,6 @@ jobs:
         mv ./snyk /usr/local/bin/
     - name: Run and monitor Snyk to check configuration files for security issues
       run: |   
-        snyk auth ${{ secrets.SNYK_TOKEN }}
+        snyk auth ${{ f453f5a7-e2ac-4941-9d4e-ce0b32d9b253 }}
         snyk iac test --report
  
